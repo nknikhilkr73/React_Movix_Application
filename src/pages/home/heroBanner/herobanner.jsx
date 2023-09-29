@@ -25,6 +25,12 @@ const HeroBanner = () => {
         }
     }
 
+    const searchQueryHandlerOnClick = () => {
+
+        navigate(`/search/${query}`)
+
+    }
+
     return (
         <div className='heroBanner'>
             {!loading && <div className='backdrop-img'>
@@ -46,7 +52,7 @@ const HeroBanner = () => {
                             onKeyUp={searchQueryHandler}
                             onChange={(e) => setQuery(e.target.value)}
                         ></input>
-                        <button onClick={searchQueryHandler}>Search</button>
+                        <button onClick={searchQueryHandlerOnClick}>Search</button>
                     </div>
                 </div>
 
